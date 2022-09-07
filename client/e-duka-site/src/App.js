@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import Home from "./components/Home";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import Item from "./components/Item";
+import Login from "./components/Login";
 
 function App() {
+
+  const [token, setToken] = useState(localStorage.getItem("userToken") ?? null);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="root">
+      <Navbar setToken={setToken} />
+      <Router>
+        <Routes>
+          <Route exact path="/" element={token ? <Home /> : <Login token={token} setToken={setToken} />} />
+          <Route path="/item/id:" element={<Item />} />
+          <Route>404 Error Page</Route>
+        </Routes>
+      </Router>
+      <Footer />
+      
     </div>
   );
 }
