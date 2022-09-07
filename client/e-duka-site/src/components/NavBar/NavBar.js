@@ -76,7 +76,7 @@ export default function NavBar() {
         <div>
           <div className="flex items-center justify-between py-3 md:py-5 md:block">
             <a href="javascript:void(0)">
-              <h2 className="logo font-bold">
+              <h2 className="text-2xl font-bold">
                 E-<em>Duka</em>-Site
               </h2>
             </a>
@@ -138,7 +138,35 @@ export default function NavBar() {
                 <a href="javascript:void(0)">Contact US</a>
               </li>
             </ul>
-          </div>
+            <div className="mt-3 space-y-2 lg:hidden md:inline-block">
+                    <a
+                        href="javascript:void(0)"
+                        className="inline-block w-full px-4 py-2 text-center text-white bg-gray-600 rounded-md shadow hover:bg-gray-800"
+                    >
+                        Sign in
+                    </a>
+                    <a
+                        href="javascript:void(0)"
+                        className="inline-block w-full px-4 py-2 text-center text-gray-800 bg-white rounded-md shadow hover:bg-gray-100"
+                    >
+                        Sign up
+                    </a>
+                </div>
+                    </div>
+                </div>
+                <div className="hidden space-x-2 md:inline-block">
+                    <a
+                        href="javascript:void(0)"
+                        className="px-4 py-2 text-white bg-gray-600 rounded-md shadow hover:bg-gray-800"
+                    >
+                        Sign in
+                    </a>
+                    <a
+                        href="javascript:void(0)"
+                        className="px-4 py-2 text-gray-800 bg-white rounded-md shadow hover:bg-gray-100"
+                    >
+                        Sign up
+                    </a>
         </div>
       </div>
     </nav>
