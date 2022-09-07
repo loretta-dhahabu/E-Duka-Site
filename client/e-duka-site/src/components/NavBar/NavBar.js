@@ -1,69 +1,146 @@
-import React from "react";
-import './NavBar.css';
-import { Link } from "react-router-dom";
-import {FaEnvelope, FaFacebook, FaInstagram, FaLinkedin, FaPhoneAlt, FaTwitter} from "react-icons/fa";
+import React, {useState} from "react";
+// import './NavBar.css';
+// import { Link } from "react-router-dom";
+// import {FaEnvelope, FaFacebook, FaInstagram, FaLinkedin, FaPhoneAlt, FaTwitter} from "react-icons/fa";
 
-function NavBar () {
+// function NavBar () {
+//   return (
+//     <header className="header-sec">
+//       <div className="media-contacts">
+//         <div className="phonecall">
+//           <FaPhoneAlt />: +2547100000
+//         </div>
+//         <div className="mail">
+//           <FaEnvelope />: e-duka-site_app@site.com
+//         </div>
+//         <div className="media-handles">
+//           <ul>
+//             <a>
+//               <li>
+//                 <FaTwitter />
+//               </li>
+//             </a>
+//             <a>
+//               <li>
+//                 <FaInstagram />
+//               </li>
+//             </a>
+//             <a>
+//               <li>
+//                 <FaFacebook />
+//               </li>
+//             </a>
+//             <a>
+//               <li>
+//                 <FaLinkedin />
+//               </li>
+//             </a>
+//           </ul>
+//         </div>
+//       </div>
+//       <div className="nav_bar">
+//         <div className="logo">
+//           <h1>
+//             E-<em>Duka</em>-Site
+//           </h1>
+//         </div>
+//         <div className="routes">
+//           <ul>
+//             <li>
+//               <Link to="/">Home</Link>
+//             </li>
+//             <li>
+//               <Link to="products">Products</Link>
+//             </li>
+//             <li>
+//               <Link to="registeruser">Register_Users</Link>
+//             </li>
+//             <li>
+//               <Link to="reviews">Reviews</Link>
+//             </li>
+//           </ul>
+//         </div>
+//         <button >Logout</button>
+//       </div>
+//     </header>
+//   );
+// }
+// export default NavBar;
+
+export default function NavBar() {
+  const [navbar, setNavbar] = useState(false);
+
   return (
-    // <div><h1>NavBar</h1></div>
-    <header className="header-sec">
-      <div className="media-contacts">
-        <div className="phonecall">
-          <FaPhoneAlt />: +2547100000
+    <nav className="w-full bg-white shadow">
+      <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
+        <div>
+          <div className="flex items-center justify-between py-3 md:py-5 md:block">
+            <a href="javascript:void(0)">
+              <h2 className="logo font-bold">
+                E-<em>Duka</em>-Site
+              </h2>
+            </a>
+            <div className="md:hidden">
+              <button
+                className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
+                onClick={() => setNavbar(!navbar)}
+              >
+                {navbar ? (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-6 h-6"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                ) : (
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    className="w-6 h-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M4 6h16M4 12h16M4 18h16"
+                    />
+                  </svg>
+                )}
+              </button>
+            </div>
+          </div>
         </div>
-        <div className="mail">
-          <FaEnvelope />: e-duka-site_app@site.com
-        </div>
-        <div className="media-handles">
-          <ul>
-            <a>
-              <li>
-                <FaTwitter />
+        <div>
+          <div
+            className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
+              navbar ? "block" : "hidden"
+            }`}
+          >
+            <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
+              <li className="text-gray-600 hover:text-blue-600">
+                <a href="javascript:void(0)">Home</a>
               </li>
-            </a>
-            <a>
-              <li>
-                <FaInstagram />
+              <li className="text-gray-600 hover:text-blue-600">
+                <a href="javascript:void(0)">Blog</a>
               </li>
-            </a>
-            <a>
-              <li>
-                <FaFacebook />
+              <li className="text-gray-600 hover:text-blue-600">
+                <a href="javascript:void(0)">About US</a>
               </li>
-            </a>
-            <a>
-              <li>
-                <FaLinkedin />
+              <li className="text-gray-600 hover:text-blue-600">
+                <a href="javascript:void(0)">Contact US</a>
               </li>
-            </a>
-          </ul>
+            </ul>
+          </div>
         </div>
       </div>
-      <div className="nav_bar">
-        <div className="logo">
-          <h1>
-            E-<em>Duka</em>-Site
-          </h1>
-        </div>
-        <div className="routes">
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="products">Products</Link>
-            </li>
-            <li>
-              <Link to="registeruser">Register_Users</Link>
-            </li>
-            <li>
-              <Link to="reviews">Reviews</Link>
-            </li>
-          </ul>
-        </div>
-        <button >Logout</button>
-      </div>
-    </header>
+    </nav>
   );
 }
-export default NavBar;

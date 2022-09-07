@@ -133,7 +133,7 @@ function Footer() {
       <div class="foot">
         <hr></hr>
         <h5>
-          Designed by @group-7 members <br /> copyright reserved <br />
+         All rights reserved <br /> copyright reserved <br />
           <a href="/" class="up">
             <FaArrowUp />
           </a>
