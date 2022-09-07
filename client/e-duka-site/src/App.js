@@ -1,28 +1,28 @@
-import React, { useState } from "react";
+import React from "react";
 import "./App.css";
-import Home from "./components/Home";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
-import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
-import Item from "./components/Item";
-import Login from "./components/Login";
+//imports components
+import NavBar from "./components/NavBar/NavBar.js"
+import Footer from "./components/Footer/Footer.js";
+//absolute imports
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+//imports pages
+import Home from "./pages/Home/Home.js";
+import Products from "./pages/Products/Products.js";
+import Reviews from "./pages/Reviews/ReviewList.js";
+import RegisterUsers from "./pages/RegisterUsers/Register.js"
 
 function App() {
-
-  const [token, setToken] = useState(localStorage.getItem("userToken") ?? null);
+  // const [token, setToken] = useState(localStorage.getItem("userToken") ?? null);
   return (
-    <div className="root">
-      <Navbar setToken={setToken} />
-      <Router>
+    <Router>
+      <NavBar />
+      <div className="App">
         <Routes>
-          <Route exact path="/" element={token ? <Home /> : <Login token={token} setToken={setToken} />} />
-          <Route path="/item/id:" element={<Item />} />
-          <Route>404 Error Page</Route>
+
         </Routes>
-      </Router>
-      <Footer />
-      
-    </div>
+      </div>
+      <Footer/>
+   </Router>
   );
 }
 

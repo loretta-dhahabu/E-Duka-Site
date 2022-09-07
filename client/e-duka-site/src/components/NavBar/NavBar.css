@@ -1,0 +1,89 @@
+.header-sec{
+    display: block;
+}
+.media-contacts{
+    display: flex;
+    justify-content: space-around;
+    background-image:radial-gradient(#ffe53b, #00ffff);
+    gap: 1em;
+}
+.phonecall{
+    display: flex;
+    margin-top: 1em;
+}
+
+.mail{
+    display: flex;
+    margin-top: 1em;}
+
+.media-handles > ul {
+    display: flex;
+    text-decoration: none;
+    float: right;
+}
+.media-handles > ul a li{
+    list-style: none;
+    padding: 0 1em 0 1em;
+    /* margin-right: 2em; */
+}
+.media-handles > ul a li:hover{
+    cursor: pointer;
+}
+/* unvisited link */
+a:link {
+  color: green;
+}
+
+/* visited link */
+a:visited {
+  color: green;
+}
+
+/* mouse over link */
+a:hover {
+  color: red;
+}
+
+/* selected link */
+a:active {
+  color: yellow;
+}
+.nav_bar{
+    display: flex;
+    justify-content: space-around;
+    background-image:linear-gradient(#ffff, #aaaaaa, #828282);
+    gap: 1em;
+    /* overflow: auto; */
+    margin-bottom: -2em;
+    /* position: fixed;
+  top: 0;
+  width: 100%; */
+}
+.logo{
+  float: left;
+  margin-left: -10em;
+  color: #137bff;
+  margin-top: -1em;
+}
+.logo em{
+    color: #00be51;
+    /* background-color: #00a1a7; */
+}
+
+.routes > ul {
+    display: flex;
+    text-decoration: none;
+    float: right;
+    margin-right: -10em;
+    margin-top: 1.5em;
+}
+.routes > ul  li{
+    list-style: none;
+    padding: 0 1em 0 1em;
+    /* margin-right: 2em; */
+}
+.routes > ul  li:hover{
+    cursor: pointer;
+    color: #00a1a7;
+    font-size: 20px;
+}
