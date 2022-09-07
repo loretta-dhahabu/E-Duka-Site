@@ -1,0 +1,45 @@
+/* card section */
+.card-container{
+  margin: 0 200px;
+  display: flex;
+  flex-direction: row;
+  flex-flow: row wrap;
+  align-items: center;
+  
+}
+
+.card{
+  border-radius: 10px;
+  background: white;
+  margin: 10px;
+  padding: 25px;
+  text-align: center;
+  color: black;
+  text-decoration: none;
+}
+
+.card div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.card img{
+  height: 200px;
+  width: 200px;
+}
+.card h2{
+  height: 55px;
+  border-bottom: 1px solid black;
+  width: 400px;
+  font-size: 20px;
+  text-decoration: none;
+  text-align: left;
+}
+.card p{
+  width: 400px;
+  height: 200px;
+  text-align: left;
+  line-height: 20px;
+}

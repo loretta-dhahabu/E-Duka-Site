@@ -1,14 +1,11 @@
-import React, { useEffect, useState } from "react";
-import Products from "../Products/Products.js"
+import React from "react";
 
-function Home() {
+function Home ()
+{
   return (
-    <div className="home-page">
-          <h1>Home</h1>
-          <div>
-              <input type="text" id="search-input" placeholder="search..."/>
-          </div>
+    <div>
+      <h1>HOME PAGE</h1>
     </div>
-  );
+  )
 }
 export default Home;

@@ -9,8 +9,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/Home.js";
 import Products from "./pages/Products/Products.js";
 import Reviews from "./pages/Reviews/ReviewList.js";
-import Users from "./pages/Users/Users.js"
-import Suppliers from "./pages/Suppliers/Suppliers.js"
+import Users from "./pages/Users/Users.js";
+import Suppliers from "./pages/Suppliers/Suppliers.js";
 
 function App() {
   // const [token, setToken] = useState(localStorage.getItem("userToken") ?? null);
