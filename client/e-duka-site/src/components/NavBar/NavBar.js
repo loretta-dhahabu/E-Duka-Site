@@ -42,7 +42,7 @@ function NavBar () {
       <div className="nav_bar">
         <div className="logo">
           <h1>
-            E-Duka-Site
+            E-<em>Duka</em>-Site
           </h1>
         </div>
         <div className="routes">

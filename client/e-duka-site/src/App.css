@@ -51,46 +51,6 @@ body {
   background-color: black;
   border-bottom: 4px solid black;
 }
-
-.navbar {
-  background: black;
-  color: #EDE5F3;
-  padding: 10px 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  cursor: pointer;
-  margin: 0 300px;
-}
-.navbar button{
-  background-color: #282c34;
-  color: white;
-  border-radius: 5px;
-  padding: 10px;
-  width: 100px;
-  cursor: pointer;
-}
-
-.navbar button:hover{
-  background-color: white;
-  border: 1px solid black;
-  color: black;
-}
-
-.navbar h1{
-  font-size: 32px;
-}
-
-.navbar .navbar-list {
-  display: flex;
-  flex-direction: row;
-  list-style-type: none;
-}
-
-.navbar-list li {
-  margin-right: 40px;
-}
-
 .navbar input[type="text"] {
   height: 25px;
   font-size: 15px;

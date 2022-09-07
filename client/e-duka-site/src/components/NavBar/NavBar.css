@@ -77,8 +77,9 @@ a:active {
     margin-right: -10em;
     margin-top: 1.5em;
 }
-.routes > ul  li{
+.routes > ul  li {
     list-style: none;
+    text-decoration: none;
     padding: 0 1em 0 1em;
     /* margin-right: 2em; */
 }
