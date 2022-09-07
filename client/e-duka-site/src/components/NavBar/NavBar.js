@@ -66,8 +66,9 @@ import React, {useState} from "react";
 //   );
 // }
 // export default NavBar;
+import { Link } from "react-router-dom";
 
-export default function NavBar() {
+function NavBar() {
   const [navbar, setNavbar] = useState(false);
 
   return (
@@ -126,49 +127,54 @@ export default function NavBar() {
           >
             <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
               <li className="text-gray-600 hover:text-blue-600">
-                <a href="javascript:void(0)">Home</a>
+                {/* <a href="javascript:void(0)">Home</a> */}
+                <Link to="/">Home</Link>
               </li>
               <li className="text-gray-600 hover:text-blue-600">
-                <a href="javascript:void(0)">Blog</a>
+                <Link to="products">Products</Link>
               </li>
               <li className="text-gray-600 hover:text-blue-600">
-                <a href="javascript:void(0)">About US</a>
+                <Link to="suppliers">Suppliers</Link>
               </li>
               <li className="text-gray-600 hover:text-blue-600">
-                <a href="javascript:void(0)">Contact US</a>
+                <Link to="usersdetails">Users</Link>
+              </li>
+              <li className="text-gray-600 hover:text-blue-600">
+                <Link to="reviews">Reviews</Link>
               </li>
             </ul>
             <div className="mt-3 space-y-2 lg:hidden md:inline-block">
-                    <a
-                        href="javascript:void(0)"
-                        className="inline-block w-full px-4 py-2 text-center text-white bg-gray-600 rounded-md shadow hover:bg-gray-800"
-                    >
-                        Sign in
-                    </a>
-                    <a
-                        href="javascript:void(0)"
-                        className="inline-block w-full px-4 py-2 text-center text-gray-800 bg-white rounded-md shadow hover:bg-gray-100"
-                    >
-                        Sign up
-                    </a>
-                </div>
-                    </div>
-                </div>
-                <div className="hidden space-x-2 md:inline-block">
-                    <a
-                        href="javascript:void(0)"
-                        className="px-4 py-2 text-white bg-gray-600 rounded-md shadow hover:bg-gray-800"
-                    >
-                        Sign in
-                    </a>
-                    <a
-                        href="javascript:void(0)"
-                        className="px-4 py-2 text-gray-800 bg-white rounded-md shadow hover:bg-gray-100"
-                    >
-                        Sign up
-                    </a>
+              <a
+                href="javascript:void(0)"
+                className="inline-block w-full px-4 py-2 text-center text-white bg-gray-600 rounded-md shadow hover:bg-gray-800"
+              >
+                Sign in
+              </a>
+              <a
+                href="javascript:void(0)"
+                className="inline-block w-full px-4 py-2 text-center text-gray-800 bg-white rounded-md shadow hover:bg-gray-100"
+              >
+                Sign up
+              </a>
+            </div>
+          </div>
+        </div>
+        <div className="hidden space-x-2 md:inline-block">
+          <a
+            href="javascript:void(0)"
+            className="px-4 py-2 text-white bg-gray-600 rounded-md shadow hover:bg-gray-800"
+          >
+            Sign in
+          </a>
+          <a
+            href="javascript:void(0)"
+            className="px-4 py-2 text-gray-800 bg-white rounded-md shadow hover:bg-gray-100"
+          >
+            Sign up
+          </a>
         </div>
       </div>
     </nav>
   );
 }
+export default NavBar;
