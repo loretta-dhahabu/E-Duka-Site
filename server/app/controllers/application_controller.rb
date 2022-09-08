@@ -50,13 +50,25 @@ class ApplicationController < Sinatra::Base
     end
     
     #post
-    post "/products" do
-      product = Product.create(
+    post "/carts" do
+      product = Cart.create(
         title: params[:title],
         image_url: params[:image_url],
         price: params[:price],
         description: params[:description]
       )
       product.to_json
+    end
+
+    # get items from cart
+    get "/carts" do
+      products = Cart.all
+      products.to_json
+    end
+
+    # delete item from cart
+    delete "/carts/:id" do
+      products = Cart.find(params[:id])
+      products.to_json
     end
 end
