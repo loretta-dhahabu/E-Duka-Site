@@ -8,26 +8,22 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 //imports pages
 import Home from "./pages/Home/Home.js";
 import Products from "./pages/Products/Products.js";
-import Reviews from "./pages/Reviews/ReviewList.js";
-import Users from "./pages/Users/Users.js";
-import Suppliers from "./pages/Suppliers/Suppliers.js";
+import Product from "./pages/Product/Product";
 
 function App() {
   // const [token, setToken] = useState(localStorage.getItem("userToken") ?? null);
   return (
-    <Router>
-      <NavBar />
-      <div className="App">
+    <div className="root">
+      <Router>
+        <NavBar />
         <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/products" element={<Products />}></Route>
-          <Route path="/suppliers" element={<Suppliers />}></Route>
-          <Route path="/users" element={<Users />}></Route>
-          <Route path="/reviews" element={<Reviews />}></Route>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/products/:id" element={<Product />} />
         </Routes>
-      </div>
+      </Router>
       <Footer />
-    </Router>
+    </div>
   );
 }
 
