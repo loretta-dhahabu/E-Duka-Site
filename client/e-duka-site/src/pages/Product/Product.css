@@ -5,10 +5,17 @@
   align-items: center;
   justify-content: center;
   height: 90vh;
+  width: 50%;
+  margin: 2em 10em;
+  gap: 4em;
+  padding: 2em;
   background: white;
 }
 
 .card-info img{
   height: 500px;
   width: 500px;
+}
+.card-info p{
+  line-height: 2em;
 }
