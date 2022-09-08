@@ -43,3 +43,11 @@
   text-align: left;
   line-height: 20px;
 }
+.card button{
+  background-color: aqua;
+  width: 6em;
+  margin-top: .5em;
+  height: 2em;
+  border: 1px black solid;
+  border-radius: 2em;
+}
