@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 function Products() {
   const [products, setProducts] = useState([]);
   const [searchProducts, setSearchProducts] = useState([]);
-  const url = "https://fakestoreapi.com/products";
+  const url = "http://localhost:9292/products";
   useEffect(() => {
     fetch(url)
       .then((response) => response.json())
@@ -22,7 +22,7 @@ function Products() {
         return (
           <div className="container" key={product.id}>
             <div className="card">
-              <img src={product.image} alt={product.title}></img>
+              <img src={product.image_url} alt={product.title}></img>
               <h2>{product.title}</h2>
               <div>
                 <h3>{product.price} KES</h3>
