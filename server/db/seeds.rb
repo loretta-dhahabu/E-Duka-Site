@@ -39,8 +39,8 @@ end
 
 #reviews data
 puts "Seeding reviews table ....."
-review =Review.create(review_content:"it's a great product..i love it!", product_id: product_1.id, user_id: user.id)
-9.times do Review.create(review_content:"it's a great product..i love it!", product_id: product_1.id, user_id: user.id)
+review =Review.create(review_content:Faker::Restaurant.review, product_id: product_1.id, user_id: user.id)
+9.times do Review.create(review_content:Faker::Restaurant.review, product_id: product_1.id, user_id: user.id)
 
 end
 
