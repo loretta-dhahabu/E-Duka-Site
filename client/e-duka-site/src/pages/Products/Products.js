@@ -3,23 +3,23 @@ import "../Products/Products.css";
 import Product from "../Product/Product.js";
 import { Link } from "react-router-dom";
 
-function Products() {
-  const [products, setProducts] = useState([]);
-  const [searchProducts, setSearchProducts] = useState([]);
-  const url = "http://localhost:9292/products";
-  useEffect(() => {
-    fetch(url)
-      .then((response) => response.json())
-      .then((data) => setProducts(data));
-  }, []);
+function Products({product}) {
+  // const [products, setProducts] = useState([]);
+  // const [searchProducts, setSearchProducts] = useState([]);
+  // const url = "http://localhost:9292/products";
+  // useEffect(() => {
+  //   fetch(url)
+  //     .then((response) => response.json())
+  //     .then((data) => setProducts(data));
+  // }, []);
 
-  useEffect(() => {
-    setSearchProducts(products);
-  }, [products]);
+  // useEffect(() => {
+  //   setSearchProducts(products);
+  // }, [products]);
   return (
     <div className="card-container">
-      {products.map((product) => {
-        return (
+      {/* {products.map((product) => { */}
+        {/* return ( */}
           <div className="container" key={product.id}>
             <div className="card">
               <img src={product.image_url} alt={product.title}></img>
@@ -35,8 +35,8 @@ function Products() {
               </div>
             </div>
           </div>
-        );
-      })}
+        {/* ); */}
+      {/* })} */}
     </div>
   );
 }

@@ -18,7 +18,7 @@ function Product() {
     const image_url = product.image_url;
 
     axios
-      .post("http://localhost:9292/products", {
+      .post("http://localhost:9292/carts", {
         title,
         description,
         price,
@@ -33,7 +33,7 @@ function Product() {
   };
 
   useEffect(() => {
-    fetch(`https://fakestoreapi.com/products/${id}`)
+    fetch(`http://localhost:9292/products/${id}`)
       .then((response) => response.json())
       .then((data) => {
         // console.log(data);
@@ -43,7 +43,7 @@ function Product() {
 
   return (
     <div className="card-info">
-      <img src={product.image} alt={product.title}></img>
+      <img src={product.image_url} alt={product.title}></img>
       <div>
         <h2>{product.title}</h2>
         <p>{product.description}</p>
