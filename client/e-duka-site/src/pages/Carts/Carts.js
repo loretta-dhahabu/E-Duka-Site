@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "./Carts.css"
 
 function Carts() {
   const [products, setProducts] = useState([]);
@@ -11,15 +12,15 @@ function Carts() {
       });
   }, []);
   return (
-      < div className="container" >
+      < div className="cart-container" >
           { products.map( ( product ) =>
           {
             return (
               <>
-                < div className="card-cart" key={ product.id }>
-                  <h2>{ product.title }</h2>
-                  <img src={ product.image_url } alt={ product.title }></img>
-                  <h2>{ product.price }</h2>
+                <div className="card-cart" key={product.id}>
+                  <img src={product.image_url} alt={product.title}></img>
+                  <h2>{product.title}</h2>
+                  <h2>{product.price}</h2>
                 </div>
               </>
             );
