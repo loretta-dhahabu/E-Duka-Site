@@ -5,11 +5,11 @@
   align-items: center;
   justify-content: center;
   height: 90vh;
-  /* width: 50%;
+  width: 70%;
   margin: 2em 10em;
   gap: 4em;
   padding: 2em;
-  background: white; */
+  background: white;
 }
 
 .card-info img{
@@ -18,4 +18,11 @@
 }
 .card-info p{
   line-height: 2em;
+}
+.card-info button{
+  background-color: rgb(9, 172, 9);
+  width: 7em;
+  height: 3em;
+  padding: .5em;
+  border-radius: 2em;
 }

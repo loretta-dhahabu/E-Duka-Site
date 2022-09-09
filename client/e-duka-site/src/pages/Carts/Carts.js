@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-function Cart() {
+function Carts() {
   const [products, setProducts] = useState([]);
   useEffect(() => {
     fetch("http://localhost:9292/carts")
@@ -29,4 +29,4 @@ function Cart() {
     </div>
   );
 }
-export default Cart;
+export default Carts;

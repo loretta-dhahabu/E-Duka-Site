@@ -71,7 +71,7 @@ const Login = ({onAddUser}) => {
         </div>
       </form>
       <div className="go-home">
-        <a href="/home">
+        <a href="/">
           <button className="home-btn">Home</button>
         </a>
       </div>

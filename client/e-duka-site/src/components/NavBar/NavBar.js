@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import { Link } from "react-router-dom";
 import { FaCartArrowDown } from "react-icons/fa";
-import Cart from "../../pages/Cart/Cart";
+import Cart from "../../pages/Carts/Carts";
 
 function NavBar() {
   const [navbar, setNavbar] = useState(false);
