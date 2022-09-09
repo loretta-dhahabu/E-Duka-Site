@@ -44,8 +44,8 @@ function Product() {
     <div className="card-info">
       <img src={product.image_url} alt={product.title}></img>
       <div>
-        <h2>{product.title}</h2>
-        <p>{product.description}</p>
+        <h2>Title: {product.title}</h2>
+        <p>Description: {product.description}</p>
         <p>
           <em>$ {product.price}</em>
         </p>
