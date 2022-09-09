@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import { Link } from "react-router-dom";
 import { FaCartArrowDown } from "react-icons/fa";
+import Cart from "../../pages/Cart/Cart";
 
 function NavBar() {
   const [navbar, setNavbar] = useState(false);
@@ -61,41 +62,39 @@ function NavBar() {
           >
             <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
               <li className="text-gray-600 hover:text-blue-600">
-                {/* <a href="javascript:void(0)">Home</a> */}
                 <Link to="/">Home</Link>
               </li>
               <li className="text-gray-600 hover:text-blue-600">
-                <Link to="products">Products</Link>
+                <Link to="/signup">SignUp</Link>
               </li>
-              <li className="text-gray-600 hover:text-blue-600">
-                <Link to="suppliers">Suppliers</Link>
-              </li>
-              <li className="text-gray-600 hover:text-blue-600">
+              {/* <li className="text-gray-600 hover:text-blue-600">
+                <Link to="cart">Cart</Link>
+              </li> */}
+              {/* <li className="text-gray-600 hover:text-blue-600">
                 <Link to="usersdetails">Users</Link>
-              </li>
-              <li className="text-gray-600 hover:text-blue-600">
-                <Link to="reviews">Reviews</Link>
-              </li>
+              </li> */}
             </ul>
             <div className="mt-3 space-y-2 lg:hidden md:inline-block">
               <a
-                href="javascript:void(0)"
+                href="/"
                 className="inline-block w-full px-4 py-2 text-center text-white bg-gray-600 rounded-md shadow hover:bg-gray-800"
               >
-                Sign in
+                Sign Out
               </a>
             </div>
           </div>
         </div>
         <div className="hidden space-x-2 md:inline-block">
           <a
-            href="javascript:void(0)"
+            href="/"
             className="px-4 py-2 text-white bg-gray-600 rounded-md shadow hover:bg-gray-800"
           >
-            Sign in
+            Sign Out
           </a>
         </div>
-        <FaCartArrowDown/>
+        <a href="/carts">
+          <FaCartArrowDown />
+        </a>
       </div>
     </nav>
   );

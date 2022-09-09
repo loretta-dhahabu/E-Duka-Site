@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import "./Home.css"
 import Products from "../Products/Products";
 
 function Home() {
@@ -10,7 +11,8 @@ function Home() {
     fetch(url)
       .then((response) => response.json())
       .then((response) => setProducts(response));
-  }, []);
+  }, [] );
+  
   useEffect(() => {
     setSearchProducts(products);
   }, [products]);
@@ -18,7 +20,7 @@ function Home() {
     <>
       <div className="main-container">
         <h2>Welcome to E-Duka-Site</h2>
-        <Link to={`products`} onClick={() => <products />}>
+        <Link to={`products`} onClick={() => <Products />}>
           <button>Shop</button>
         </Link>
       </div>

@@ -17,8 +17,7 @@ function Product() {
     const description = product.description;
     const image_url = product.image_url;
 
-    axios
-      .post("http://localhost:9292/carts", {
+    axios.post("http://localhost:9292/carts", {
         title,
         description,
         price,
@@ -36,7 +35,7 @@ function Product() {
     fetch(`http://localhost:9292/products/${id}`)
       .then((response) => response.json())
       .then((data) => {
-        // console.log(data);
+        console.log(data);
         setProduct(data);
       });
   }, [id]);
@@ -48,7 +47,7 @@ function Product() {
         <h2>{product.title}</h2>
         <p>{product.description}</p>
         <p>
-          <em>{product.price} KES</em>
+          <em>$ {product.price}</em>
         </p>
         <p>Rating: {product.rating && product.rating.rate && product.rating.count}</p>
         <button onClick={() => handleClick(product)}>Add to Cart</button>

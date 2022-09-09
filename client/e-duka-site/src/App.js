@@ -7,8 +7,10 @@ import Footer from "./components/Footer/Footer.js";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 //imports pages
 import Home from "./pages/Home/Home.js";
+import Product from "./pages/Product/Product.js";
 import Products from "./pages/Products/Products.js";
-import Product from "./pages/Product/Product";
+import Cart from "./pages/Cart/Cart";
+import SignUp from "./pages/SignUp/Signup";
 
 function App() {
   // const [token, setToken] = useState(localStorage.getItem("userToken") ?? null);
@@ -17,9 +19,11 @@ function App() {
       <Router>
         <NavBar />
         <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/products/:id" element={<Product />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/products" element={<Products />}></Route>
+          <Route path="/products/:id" element={<Product />}></Route>
+          <Route exact path="/signup" element={<SignUp />} />
+          <Route path="/carts/" element={<Cart />} />
         </Routes>
       </Router>
       <Footer />
