@@ -6,7 +6,7 @@ import Products from "../Products/Products";
 function Home() {
   const [products, setProducts] = useState([]);
   const [searchProducts, setSearchProducts] = useState([]);
-  const url = "http://localhost:9292/products";
+  const url = "https://e-duka-site.herokuapp.com/products";
   useEffect(() => {
     fetch(url)
       .then((response) => response.json())

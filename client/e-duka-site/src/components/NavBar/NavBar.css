@@ -69,6 +69,12 @@ a:active {
     color: #00be51;
     /* background-color: #00a1a7; */
 }
+a > .cartbtn{
+  background-color: #00be51;
+  height: 2em;
+  width: 5em;
+  border-radius: 2em;
+}
 
 .routes > ul {
     display: flex;

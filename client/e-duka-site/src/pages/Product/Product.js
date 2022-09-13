@@ -17,7 +17,7 @@ function Product() {
     const description = product.description;
     const image_url = product.image_url;
 
-    axios.post("http://localhost:9292/carts", {
+    axios.post("https://e-duka-site.herokuapp.com/carts", {
         title,
         description,
         price,
@@ -32,7 +32,7 @@ function Product() {
   };
 
   useEffect(() => {
-    fetch(`http://localhost:9292/products/${id}`)
+    fetch(`https://e-duka-site.herokuapp.com/products/${id}`)
       .then((response) => response.json())
       .then((data) => {
         console.log(data);

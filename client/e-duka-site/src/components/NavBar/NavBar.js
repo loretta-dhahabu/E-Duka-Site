@@ -1,7 +1,8 @@
 import React, {useState} from "react";
 import { Link } from "react-router-dom";
-import { FaCartArrowDown } from "react-icons/fa";
-import Cart from "../../pages/Carts/Carts";
+import "./NavBar.css"
+// import { FaCartArrowDown } from "react-icons/fa";
+// import Cart from "../../pages/Carts/Carts";
 
 function NavBar() {
   const [navbar, setNavbar] = useState(false);
@@ -86,14 +87,14 @@ function NavBar() {
         </div>
         <div className="hidden space-x-2 md:inline-block">
           <a
-            href="/"
+            href="/signup"
             className="px-4 py-2 text-white bg-gray-600 rounded-md shadow hover:bg-gray-800"
           >
             Sign Out
           </a>
         </div>
         <a href="/carts">
-          <FaCartArrowDown />
+         <button className="cartbtn">Cart</button>
         </a>
       </div>
     </nav>

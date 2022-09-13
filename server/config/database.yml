@@ -1,21 +1,24 @@
-default: &default
-  adapter: postgresql
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  timeout: 5000
+# default: &default
+ 
+#   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+#   timeout: 5000
 
 development:
-  <<: *default
+  # <<: *default
+  adapter: sqlite3
   database: db/development.sqlite3
 
 test:
-  <<: *default
+  # <<: *default
+  adapter: sqlite3
   database: db/test.sqlite3
 
 production:
-  <<: *default
+  # <<: *default
+  adapter: postgresql
   database: db/production.sqlite3
+  Database: d7vrc25682qbdj
   Host: ec2-34-193-44-192.compute-1.amazonaws.com
-Database: d7vrc25682qbdj
-User: sxydyomeutypdv
-Port: 5432
-Password: 9fd3b2ca5dee3a228bd8a28c202db8dd922b190b74db2eec7abc3ada8ae00330 
+  User: sxydyomeutypdv
+  Port: 5432
+  Password: 9fd3b2ca5dee3a228bd8a28c202db8dd922b190b74db2eec7abc3ada8ae00330 
