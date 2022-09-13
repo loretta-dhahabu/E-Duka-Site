@@ -6,7 +6,7 @@ https://e-duka-frontend.herokuapp.com/
 ### backend
 https://e-duka-site.herokuapp.com/products
 ## Video Link
-https://youtu.be/Bo40OYTk_70
+https://youtu.be/k949PtS_dI8
 ## Description
 This is an e-commerce app called E-Duka-Site   that displays different varieties of products such as clothes, jewelleries, laptops etc and their details i.e from name to price, reviews and suppliers. 
 It gives an easier time to the user by making it possible to search for a certain product of their prefference by name.
